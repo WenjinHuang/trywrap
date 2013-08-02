@@ -14,7 +14,7 @@ FILE * __real_fopen ( const char * filename, const char * mode );
 FILE * __wrap_fopen ( const char * filename, const char * mode );
     
     printf("wrapped fopen\n");
-    __real_fopen(filenamem, mode);
+    return __real_fopen(filename, mode);
     
     /*struct timeval start, end;
     //int blksize, file, flags, lbfsize, r, ur, w;
@@ -59,8 +59,6 @@ FILE * __wrap_fopen ( const char * filename, const char * mode );
     gettimeofday(&end, NULL);
     
     fprintf(track, "end time: %ld\n time in total: %ld\n", end.tv_sec, end.tv_sec-start.tv_sec);
-    fclose(track);*/
-    
-    
-    return 0;
+    fclose(track);*/    
+
 }

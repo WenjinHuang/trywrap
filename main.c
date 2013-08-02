@@ -14,7 +14,7 @@ int main(int argc, const char * argv[])
     char hey[] = "hey";
    
     FILE *fp;
-    fp = fopen("/Users/ElsieHwang/Documents/xcode projects/linuxio/linuxio/file.txt", "w+");
+    fp = fopen("home/elsie/trywrap/file.txt", "w+");
     fwrite(hey, 1, sizeof(hey), fp);
     
     fclose(fp);
