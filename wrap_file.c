@@ -11,10 +11,10 @@
 
 FILE * __real_fopen ( const char * filename, const char * mode );
 
-FILE * __wrap_fopen ( const char * filename, const char * mode );
+FILE * __wrap_fopen ( const char * filename, const char * mode ) {
     
-    printf("wrapped fopen\n");
-    return __real_fopen(filename, mode);
+  printf("wrapped fopen %s %s\n",filename, mode);
+  return __real_fopen(filename, mode);
     
     /*struct timeval start, end;
     //int blksize, file, flags, lbfsize, r, ur, w;
