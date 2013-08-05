@@ -13,11 +13,8 @@ int main(int argc, const char * argv[])
 
     char hey[] = "hey";
     FILE *fp;
-
     fp = fopen("/home/elsie/trywrap/file.txt", "a+");
-
     fwrite(hey, 1, sizeof(hey), fp);
-
     fclose(fp);
 
     printf("main\n");
